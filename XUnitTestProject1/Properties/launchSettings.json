@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "XUnitTestProject1": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ROOT": "\"e:\\Program Files (x86)\\dotnet\""
+      }
+    }
+  }
+}
