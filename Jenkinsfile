@@ -17,15 +17,16 @@ pipeline {
         sh 'dotnet build'
       }
     }
-    stage('Package') {
+    stage('Publish') {
         steps {
             sh 'cd WebApplication2'
-            sh 'dotnet package'
+            sh 'dotnet publish'
         }
     }
   
   }
   
+
  
   environment {
     ASPNETCORE_ENVIRONMENT = 'Production'
