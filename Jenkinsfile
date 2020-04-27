@@ -20,7 +20,7 @@ pipeline {
     stage('Publish') {
         steps {
             sh 'cd WebApplication2'
-            sh 'dotnet publish'
+            sh 'dotnet publish -r linux-x64 -c Release'
         }
     }
   
