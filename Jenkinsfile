@@ -33,7 +33,7 @@ pipeline {
   post {
     always {
       steps {
-        step ([$class: 'MSTestPublisher', testResultsFile:"**/TestResults/UnitTests.trx", failOnError: true, keepLongStdio: true])
+        ([$class: 'MSTestPublisher', testResultsFile:"**/TestResults/UnitTests.trx", failOnError: true, keepLongStdio: true])
       
       script: emailext ( 
           to: "mark.sweeney@nttdata.com",
