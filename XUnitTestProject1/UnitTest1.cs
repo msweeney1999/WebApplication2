@@ -43,7 +43,7 @@ namespace XUnitTestProject1
                 "aaa", "bbb" 
             });
             System.Diagnostics.Debug.WriteLine(ret);
-            Assert.True((bool)ret.GetPropertyValue("success") == true);
+            Assert.True((bool)ret.GetPropertyValue("success") == false);
         }
     }
 
