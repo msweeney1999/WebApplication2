@@ -15,6 +15,12 @@ pipeline {
       steps {
         
         sh 'dotnet build'
+
+        emailext (
+          to: "mark.sweeney@nttdata.com",
+          subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+          body: '${DEFAULT_CONTENT}',
+        )
       }
     }
     stage('Test') {
